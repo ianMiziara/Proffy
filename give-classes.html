@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proffy | Sua Plataforma de Estudos Online</title>
+    
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+    
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/partials/header.css">
+    <link rel="stylesheet" href="/style/partials/page-give-classes.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body id="page-give-classes">
+
+    <div id="container">
+        <header class="page-header">
+            <div class="top-bar-container">
+                <a href="/"><img src="/images/icons/back.svg" alt="Voltar"></a>
+                <img src="/images/logo.svg" alt="Proffy">
+            </div>
+            <div class="header-content">
+                <strong>Que Incrível Que Você Quer dar Aulas.</strong>
+                <p>O Primeiro Passo É Preencher Esse Formulário de Inscrição</p>
+
+            </div>
+        </header>
+
+        <main>
+            <form action="" id="create-class">
+                <fieldset>
+                    <legend>Seus Dados</legend>
+
+                    <div class="input-block">
+                        <label for="name">Nome Completo</label>
+                        <input name="name" id="name" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="avatar">Link da Sua Foto <small>(Comece Com https://)</small></label>
+                        <input name="avatar" id="avatar" type="url" required>
+                    </div>
+                    <div class="input-block">
+                        <label for="whatsapp">WhatsApp <small>(Somente Números)</small></label>
+                        <input name="whatsapp" id="whatsapp" type="number" required>
+                    </div>
+                    <div class="textarea-block">
+                        <label for="bio">Biografia</label>
+                        <textarea name="bio" id="bio" required> </textarea>
+                    </div>
+                    
+                </fieldset>
+
+            </form>
+        </main>
+    </div>
+</body>
+</html>
