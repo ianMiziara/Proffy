@@ -1,3 +1,4 @@
+// dice
 const proffys = [
     { name:"Diego Fernandes",
         avatar: "https://avatars2.githubusercontent.com/u/2254731?s=460&amp;u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&amp;v=4",
@@ -42,32 +43,62 @@ const proffys = [
         }
 ]
 
+const subjects = [
+    "Artes",
+    "Biologia",
+    "Ciências",
+    "Educação Física",
+    "Física",
+    "Geografia",
+    "História",
+    "Matemática",
+    "Português",
+    "Química",
+]
+
+const weekdays = [
+    "Domingo",
+    "Segunda",
+    "Terça",
+    "Quarta",
+    "Quinta",
+    "Sexta",
+    "Sábado",
+]
+
+// functionalities
 function pageLanding(req, res) {
     return res.render("index.html")
 }
 
 function pageStudy(req, res) {
     const filters = req.query
-    return res.render("study.html", { proffys, filters })
+    return res.render("study.html", { proffys, filters, subjects, weekdays })
 }
 
 function pageGiveClasses(req, res) {
-    return res.render("give-classes.html")
+    return res.render("give-classes.html", { subjects, weekdays })
 }
 
+// server
 const express = require('express')
 const server = express()
 
+// configure nunjucks (template engine)
 const nunjucks = require('nunjucks')
 nunjucks.configure('src/views', {
     express: server,
     noCache: true,
 })
 
+// server start and configuration
 server
+// configuration of static files (css, scripts, images)
 .use(express.static("public"))
+// application routes
 .get("/", pageLanding)
 .get("/study", pageStudy)
 .get("/give-classes", pageGiveClasses)
+// server start
 .listen(5500)
 
