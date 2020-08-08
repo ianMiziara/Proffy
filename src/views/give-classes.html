@@ -66,10 +66,10 @@
                         <select name="subject" id="subject" required>
                             <option value="">Selecione Uma Opção</option>
                             
-                            {%for weekday in weekdays %}
-                                <option value="{{loop.index0}}">
-                                    {{weekday}}
-                                </option>
+                            {%for subject in subjects %}
+                            <option value="{{loop.index}}">
+                                {{subject}}
+                            </option>
                             {%endfor %}
                             
                         </select>    
@@ -79,7 +79,7 @@
                         <label for="cost">Custo da Sua Hora/Aula
                             <small>(R$)</small>
                         </label>
-                        <input type="cost" id="cost" type="number">
+                        <input name="cost" type="cost" id="cost" type="number">
                     </div>
                 </fieldset>
 
@@ -95,10 +95,10 @@
                             <select name="weekday[]" id="weekday" required>
                             <option value="">Selecione Uma Opção</option>
 
-                                {%for subject in subjects %}
-                                <option value="{{loop.index}}">
-                                    {{subject}}
-                                </option>
+                            {%for weekday in weekdays %}
+                            <option value="{{loop.index0}}">
+                                {{weekday}}
+                            </option>
                             {%endfor %}
 
                             </select>
