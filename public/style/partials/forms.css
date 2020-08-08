@@ -43,3 +43,11 @@
     position: absolute;
     left: 1.6rem;
     bottom: 9px; /* here it was supposed to be (bottom: 0px;), but aesthetically for me it was better (bottom: 9px;) */
+
+}
+
+label small {
+    font-size: 1.2rem;
+    padding-left: 1.2rem;
+    color: var(--color-small-info);
+}
