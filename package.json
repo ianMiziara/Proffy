@@ -9,5 +9,19 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "description": "Proffy | Sua Plataforma de Estudos Online.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianMiziara/Proffy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianMiziara/Proffy/issues"
+  },
+  "homepage": "https://github.com/ianMiziara/Proffy#readme"
 }
